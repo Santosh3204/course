@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+</head>
+<body>
+    {% for i in resp_dict %}
+    <center>
+        <br>
+        
+        {{i.course_title}}
+        <br>
+        <label for="file">Downloading progress:</label>
+        {{i.progress_value}}%    
+        <br>
+        <progress id="file" value="{{i.progress_value}}" max="100"> {{i.progress_value}}% </progress>
+        <hr>
+        <br>
+
+    </center>
+    {% endfor %}
+</body>
+</html>
