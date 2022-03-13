@@ -7,13 +7,15 @@
     <title>Course</title>
 </head>
 <body>
+
+    <br>
     {% for i in resp_dict %}
     <center>
         <br>
         
         {{i.course_title}}
         <br>
-        <label for="file">Downloading progress:</label>
+        <label for="file">Course completion:</label>
         {{i.progress_value}}%    
         <br>
         <progress id="file" value="{{i.progress_value}}" max="100"> {{i.progress_value}}% </progress>
